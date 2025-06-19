@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Font Awesome para ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     body {
@@ -15,44 +15,72 @@
       color: #222;
       text-align: center;
     }
+
     .container {
       max-width: 500px;
       margin: 0 auto;
       padding: 20px;
     }
+
     .logo {
       width: 200px;
       margin: 20px auto;
     }
+
     h1 {
       font-size: 22px;
       margin-bottom: 10px;
     }
+
     .slogan {
-      font-size: 14px; /* diminuída */
+      font-size: 14px;
       margin-bottom: 15px;
     }
+
     .chamada {
       margin: 20px 0 10px;
     }
+
     .link-button {
-      display: block;
-      background: linear-gradient(to right, #00cfcf, #00a8c6);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, #00bcd4, #007ea7);
       color: #fff;
       text-decoration: none;
-      padding: 15px;
-      padding-left: 20px;
-      margin: 10px 0;
-      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 12px 0;
+      border-radius: 10px;
       font-size: 16px;
-      transition: 0.3s;
       text-align: left;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      transform-origin: left center;
     }
+
     .link-button:hover {
-      opacity: 0.85;
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      filter: brightness(1.1);
     }
+
     .link-button i {
-      margin-right: 10px;
+      font-size: 20px;
+      width: 24px;
+      text-align: center;
+    }
+
+    /* Animação personalizada para WhatsApp */
+    .link-button.whatsapp:hover i {
+      animation: shake 0.4s ease;
+    }
+
+    @keyframes shake {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(5deg); }
+      50% { transform: rotate(-5deg); }
+      75% { transform: rotate(4deg); }
+      100% { transform: rotate(0deg); }
     }
   </style>
 </head>
@@ -64,17 +92,21 @@
     <p class="chamada">Clique nos botões abaixo e aproveite agora!</p>
 
     <a class="link-button" href="https://www.divulgadorinteligente.com/lhmktdigital" target="_blank">
-      <i class="fas fa-tags"></i> Ver todas as promoções
+      <i class="fas fa-shopping-cart"></i> Ver todas as promoções
     </a>
-    <a class="link-button" href="https://chat.whatsapp.com/CKkIKaY9SL20LoiJZaADer" target="_blank">
+
+    <a class="link-button whatsapp" href="https://chat.whatsapp.com/CKkIKaY9SL20LoiJZaADer" target="_blank">
       <i class="fab fa-whatsapp"></i> Grupo de ofertas
     </a>
+
     <a class="link-button" href="#" target="_blank">
       <i class="fab fa-instagram"></i> Instagram
     </a>
+
     <a class="link-button" href="#" target="_blank">
       <i class="fab fa-facebook"></i> Facebook
     </a>
+
     <a class="link-button" href="#" target="_blank">
       <i class="fab fa-tiktok"></i> TikTok
     </a>
