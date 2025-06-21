@@ -91,7 +91,7 @@
     <p class="slogan">Ofertas imperdíveis com agilidade, simplicidade e zero complicações!</p>
     <p class="chamada">Clique nos botões abaixo e aproveite agora!</p>
 
-    <a class="link-button" href="https://www.divulgadorinteligente.com/lhmktdigital" target="_blank">
+    <a class="link-button" href="https://lhmktdigital.github.io/lhmktdigital-promocoes/" target="_blank">
       <i class="fas fa-shopping-cart"></i> Ver todas as promoções
     </a>
 
@@ -99,7 +99,7 @@
       <i class="fab fa-whatsapp"></i> Grupo de ofertas
     </a>
 
-    <a class="link-button" href="#" target="_blank">
+    <a class="link-button" href="https://www.instagram.com/lhmarketingepromocoes/" target="_blank">
       <i class="fab fa-instagram"></i> Instagram
     </a>
 
@@ -107,9 +107,19 @@
       <i class="fab fa-facebook"></i> Facebook
     </a>
 
-    <a class="link-button" href="#" target="_blank">
+    <a class="link-button" href="https://www.tiktok.com/@lhmktkqvsbr?_t=ZM-8xMemOA9p7m&_r=1" target="_blank">
       <i class="fab fa-tiktok"></i> TikTok
     </a>
   </div>
+
+  <script>
+    // Ocultar automaticamente botões com href inválido
+    document.querySelectorAll('.link-button').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.trim() === '#' || href.trim() === '') {
+        link.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
